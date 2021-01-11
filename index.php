@@ -109,6 +109,7 @@ $sub_menu = array(
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
     crossorigin="anonymous">
 </script>
+<script src="skin/script.js"></script>
 
 
 
