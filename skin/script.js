@@ -26,20 +26,20 @@ const JSON = {
 let itemsContainer = '';
 
 JSON.submenu.forEach(item => {
-    let liItem = `<a class="dropdown-item" href="${item.url}">${item.titulo}</a>`
+    let liItem = `<li><a href="${item.url}">${item.titulo}</a></li>`
     itemsContainer += liItem;
 });
 
-$('.dropdown-menu').append(itemsContainer);
+$('.menuJSON').append(itemsContainer);
 
 $('.inicio-btn').click(function () {
     $('.contenido').toggleClass('hidden');
 });
 
 $('.compras-btn').mouseover(function () {
-    $('.aside ul').addClass('hover');
+    $('.aside').addClass('hover');
 }).mouseout(function () {
-    $('.aside ul').removeClass('hover');
+    $('.aside').removeClass('hover');
 });
 
 $('.nosotros-btn').click(function () {

@@ -27,8 +27,8 @@ $sub_menu = array(
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -39,12 +39,39 @@ $sub_menu = array(
 </head>
 <body>
 <div class="container">
-    <header class="row d-flex">
-        <div class="col-4">
-            <img src="assets/images/logo.png" alt="Logo" class="logo"/>
-        </div>
+    <header>
+        <img src="assets/images/logo.png" alt="Logo" class="logo"/>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light menu-items">
+
+
+
+    <nav>
+        <div id="header">
+			<ul class="navegador">
+				<li>
+                    <a class="inicio-btn" href="#">INICIO <span class="sr-only">(current)</span></a>
+               
+                </li>
+				<li><a href="#">PRODUCTOS</a>
+					<ul class="menuJSON">
+						<li class="menuPHP">
+                            <a href="#">PHP</a>
+							<ul>
+                                <?php
+                                    foreach ($sub_menu as $item) {
+                                        echo "<a class='dropdown-item' href='" . $item['url'] . "'>" . $item['titulo'] . "</a>";
+                                    }
+                                ?>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a class="nosotros-btn" href="#">NOSOTROS</a></li>
+				<li><a class="compras-btn" href="#">COMPRAS</a></li>
+			</ul>
+		</div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light menu-items">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -63,8 +90,8 @@ $sub_menu = array(
                         foreach ($sub_menu as $item) {
                             echo "<a class='dropdown-item' href='" . $item['url'] . "'>" . $item['titulo'] . "</a>";
                         }
-                        ?>
-                        <div class="dropdown-divider"></div>
+                        ?> -->
+                        <!-- <div class="dropdown-divider"></div>
                         <a class="dropdown-item disabled">JavaScript</a>
 
                     </div>
@@ -77,23 +104,33 @@ $sub_menu = array(
                 </li>
             </ul>
         </div>
-    </nav>
-    <main class="row contenido">
-        <aside class="col-3 aside">
+    </nav>  -->
+
+
+    <main class="contenido">
+        <div class="aside">
             <ul class="">
                 <li class="aside-placeholder"></li>
             </ul>
-        </aside>
-        <section class="col-9 list">
-            <ul class="d-flex justify-content-around flex-wrap text-center align-content-around">
-                <li>Producto 1</li>
-                <li>Producto 2</li>
-                <li>Producto 3</li>
-                <li>Producto 4</li>
-                <li>Producto 5</li>
-                <li>Producto 6</li>
-            </ul>
-        </section>
+        </div>
+        <div class="producto">
+            <p>producto1</p>
+        </div>
+        <div class="producto">
+            <p>producto2</p>
+        </div>
+        <div class="producto">
+            <p>producto3</p>
+        </div>
+        <div class="producto">
+            <p>producto4</p>
+        </div>
+        <div class="producto">
+            <p>producto5</p>
+        </div>
+        <div class="producto">
+            <p>producto6</p>
+        </div>
     </main>
 </div>
 
